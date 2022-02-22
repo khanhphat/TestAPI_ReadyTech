@@ -55,20 +55,15 @@ namespace CoffeeMachine
                 });
             }); //return status 400-599
 
-            app.UseRouting(); //endpointRoutingMiddleware
+            app.UseRouting(); 
 
-            app.UseAuthorization(); //xac dinh danh tinh
+            app.UseAuthorization(); 
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
                
             });
-
-            //app.Run(async context => {
-            //    context.Response.StatusCode = StatusCodes.Status404NotFound;
-            //    await context.Response.WriteAsync("Page not found");
-            //});
         }
     }
 }
